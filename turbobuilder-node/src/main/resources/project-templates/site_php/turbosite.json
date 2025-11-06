@@ -1,0 +1,73 @@
+{
+
+    "$schema": "https://raw.githubusercontent.com/edertone/TurboBuilder/master/TurboBuilder-Node/src/main/resources/json-schema/turbosite.schema.json",
+    
+    "errorSetup": {
+        "exceptionsToBrowser": true,
+        "exceptionsToLog": "",
+        "exceptionsToMail": "",
+        "warningsToBrowser": true,
+        "warningsToLog": "",
+        "warningsToMail": "",
+        "tooMuchTimeWarning": 3000,
+        "tooMuchMemoryWarning": 5000000
+    },
+    
+    "homeView": "home",
+     
+    "baseURL": "",
+     
+    "singleParameterView": "single-parameter",
+    
+    "locales": ["en_US", "es_ES"],
+    
+    "translationLocations": [
+        {
+            "label": "resources",
+            "path": "resources/locales/$bundle/$bundle_$locale.properties",
+            "bundles": []
+        }
+    ],
+    
+    "globalCDNS": [
+        {
+            "url": "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js",
+            "fallbackVerify": "window.jQuery",
+            "fallbackResource": "libs/jquery/jquery.js"
+        }
+    ],
+    
+    "globalJs": [
+        "libs/turbocommons-es5/turbocommons-es5.js"
+    ],
+    
+    "globalCss": [
+        "libs/normalize/normalize.css",
+        "view/css/global-styles.scss"
+    ],
+    
+    "globalHtml": [
+    ],
+    
+    "globalComponents": [
+        "view/components/main-menu/main-menu",
+        "view/components/footer/footer"
+    ],
+    
+    "viewComponents": [
+    ],
+    
+    "webServices": {
+        "crossOriginCORS": "restrict",
+        "api": [
+            {
+                "uri": "api/site",
+                "namespace": "project\\src\\main\\services"
+            },
+            {
+                "uri": "api/turbosite/chain",
+                "namespace": "org\\turbosite\\src\\main\\php\\services\\chain"
+            }
+        ]
+    }
+}

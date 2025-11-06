@@ -1,0 +1,60 @@
+{
+  "name": "turbobuilder",
+  "version": "8.0.0",
+  "description": "Command line tool with a massive amount of features to help with daily development tasks: build projects, run unit tests, generate docs, upload to ftp, compress images, detect duplicate code, force copyright headers, and many more features",
+  "files": [
+    "src/main",
+    "src/test"
+  ],
+  "scripts": {
+    "test": "node node_modules/jasmine/bin/jasmine --config=src/test/js/jasmine.json",
+    "test-debug": "node --inspect-brk node_modules/jasmine/bin/jasmine --config=src/test/js/jasmine.json"
+  },
+  "bin": {
+    "tb": "./src/main/js/turbobuilder.js",
+    "turbobuilder": "./src/main/js/turbobuilder.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edertone/TurboBuilder"
+  },
+  "dependencies": {
+    "clean-css": "^5.3.1",
+    "commander": "^9.4.0",
+    "html-minifier": "^4.0.0",
+    "http-server": "^14.1.1",
+    "imagemin": "^7.0.1",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.1",
+    "jasmine": "^5.6.0",
+    "jscpd": "^3.4.5",
+    "json-dup-key-validator": "^1.0.3",
+    "jsonschema": "^1.4.1",
+    "opn": "^6.0.0",
+    "sass": "^1.77.6",
+    "selenium-webdriver": "^4.22.0",
+    "sharp": "^0.33.4",
+    "turbocommons-ts": "^3.12.0",
+    "turbodepot-node": "^10.0.0",
+    "turbotesting-node": "^10.4.0",
+    "typedoc": "^0.19.2",
+    "typescript": "^3.8.3",
+    "uglify-es": "3.3.9"
+  },
+  "devDependencies": {
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "keywords": [
+    "project",
+    "builder",
+    "tool"
+  ],
+  "author": "edertone",
+  "license": "Apache-2.0",
+  "preferGlobal": true,
+  "bugs": {
+    "url": "https://github.com/edertone/TurboBuilder/issues"
+  },
+  "homepage": "https://turbobuilder.org"
+}
