@@ -747,16 +747,16 @@ exports.buildAppAngular = function (destPath) {
     // Copy htaccess file if it exists to the target folder
     if(fm.isFile('./src/htaccess.txt')){
         
-        fm.copyFile('./src/htaccess.txt', destPath + sep + 'dist' + sep + '.htaccess');
+        fm.copyFile('./src/htaccess.txt', destPath + sep + 'dist' + sep + 'browser' + sep + '.htaccess');
     }
     
     // Validate the index html code
-    let indexHtmlCode = fm.readFile(destPath + sep + 'dist' + sep + 'index.html');
+    let indexHtmlCode = fm.readFile(destPath + sep + 'dist' + sep + 'browser' + sep + 'index.html');
     
     // Generate favicons
     let faviconsHash = StringUtils.generateRandom(8, 8);
     
-    generateFavicons('./src/assets/favicons', destPath + sep + 'dist', faviconsHash);
+    generateFavicons('./src/assets/favicons', destPath + sep + 'dist' + sep + 'browser', faviconsHash);
     
     // Add the html code to referene the favicons on the index.html generated file
     let faviconsCode = `<link rel="icon" type="image/png" sizes="16x16" href="16x16-${faviconsHash}.png">` +
@@ -765,7 +765,7 @@ exports.buildAppAngular = function (destPath) {
                        `<link rel="icon" type="image/png" sizes="128x128" href="128x128-${faviconsHash}.png">` +
                        `<link rel="icon" type="image/png" sizes="196x196" href="196x196-${faviconsHash}.png">`;
    
-    fm.saveFile(destPath + sep + 'dist' + sep + 'index.html', StringUtils.replace(indexHtmlCode, '</head>', faviconsCode + '</head>', 1));
+    fm.saveFile(destPath + sep + 'dist' + sep + 'browser' + sep + 'index.html', StringUtils.replace(indexHtmlCode, '</head>', faviconsCode + '</head>', 1));
 }
 
 
