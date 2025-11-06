@@ -1,5 +1,5 @@
 {
-    "$id": "https://raw.githubusercontent.com/edertone/TurboBuilder/master/TurboBuilder-Node/src/main/resources/json-schema/turbodepot.schema.json",
+    "$id": "https://raw.githubusercontent.com/edertone/turbobuilder/master/turbobuilder-node/src/main/resources/json-schema/turbodepot.schema.json",
     "$schema": "http://json-schema.org/draft-07/schema#",
     "type": "object",
     "title": "turbodepot.json schema",
@@ -13,7 +13,7 @@
         "$schema": {
             "type": "string",
             "description": "Url to the json schema definition to validate this file",
-            "enum": ["https://raw.githubusercontent.com/edertone/TurboBuilder/master/TurboBuilder-Node/src/main/resources/json-schema/turbodepot.schema.json"]
+            "enum": ["https://raw.githubusercontent.com/edertone/turbobuilder/master/turbobuilder-node/src/main/resources/json-schema/turbodepot.schema.json"]
         },
         "depots": {
             "type": "array",
